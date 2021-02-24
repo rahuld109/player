@@ -1,0 +1,26 @@
+.player__container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 10px 4px;
+}
+
+.player__name {
+  padding: 0rem 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player__image {
+  max-height: 300px;
+  min-width: 300px;
+  object-fit: fill;
+}
+
+.skill__badge {
+  background: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-weight: bold;
+}
