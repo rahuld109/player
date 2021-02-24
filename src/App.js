@@ -4,17 +4,17 @@ import axios from "axios";
 import PlayerDisplay from "./PlayerDisplay";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
   const [players, getPlayers] = useState("");
-  const [teams, getTeams] = useState("");
+
   const url = "https://api.npoint.io/d6bd0efc05639084eb17/";
+
   const getAllPlayers = () => {
     axios
       .get(`${url}`)
       .then((resp) => {
         const PlayerData = resp.data.playerList;
-        const TeamData = resp.data.teamsList;
         getPlayers(PlayerData);
-        getTeams(TeamData);
       })
       .catch((error) => console.error(`Error: ${error}`));
   };
@@ -25,9 +25,19 @@ function App() {
 
   return (
     <>
-      <h1 align="center">Football Players ⚽</h1>
+      <div className="search__container">
+        <h1>Football Players ⚽</h1>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        ></input>
+      </div>
+
       <div className="player__Display">
-        <PlayerDisplay players={players} teams={teams} />
+        <PlayerDisplay players={players} searchTerm={searchTerm} />
       </div>
     </>
   );

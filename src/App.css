@@ -8,3 +8,51 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.search__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 10px;
+}
+
+input {
+  background-color: transparent;
+  border: 2px solid rebeccapurple;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  width: 30%;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rebeccapurple;
+  opacity: 1;
+}
+
+h1 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .search__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 10px;
+  }
+  input {
+    width: 80%;
+  }
+  h1 {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}

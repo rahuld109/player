@@ -12,8 +12,8 @@
 }
 
 .player__image {
-  max-height: 300px;
-  min-width: 300px;
+  min-height: 324px;
+  min-width: 324px;
   object-fit: fill;
 }
 
