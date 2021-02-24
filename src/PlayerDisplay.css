@@ -17,10 +17,35 @@
   object-fit: fill;
 }
 
+.player__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player__info h3 {
+  margin-block-start: 0.3em !important;
+  margin-block-end: 0.3em !important;
+}
+
+.match__date {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
 .skill__badge {
   background: rebeccapurple;
   color: white;
   border-radius: 5px;
   padding: 0 5px;
   font-weight: bold;
+}
+
+.match__container {
+  background: rebeccapurple;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 5px;
 }
