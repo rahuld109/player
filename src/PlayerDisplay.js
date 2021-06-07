@@ -14,6 +14,7 @@ function PlayerDisplay(props) {
         ) {
           return player;
         }
+        return player;
       })
       .map((player, i) => {
         console.log(player);
@@ -39,7 +40,7 @@ function PlayerDisplay(props) {
                 <div className="match__container">
                   <div className="player__info" align="center" key={i}>
                     <h3>
-                      {match.CCode ? match.CCode : "NA"} vs.{" "}
+                      {match.CCode ? match.CCode : "NA"} vs.
                       {match.VsCCode ? match.VsCCode : "NA"}
                     </h3>
                   </div>

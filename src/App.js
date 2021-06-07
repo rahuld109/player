@@ -23,10 +23,13 @@ function App() {
     getAllPlayers();
   }, []);
 
+  var i = 1;
+
   return (
     <>
       <div className="search__container">
         <h1>Football Players ⚽</h1>
+
         <input
           type="text"
           placeholder="Search..."
@@ -35,7 +38,7 @@ function App() {
           }}
         ></input>
       </div>
-
+      <h1>{i === 1 ? "true" : "false"}</h1>
       <div className="player__Display">
         <PlayerDisplay players={players} searchTerm={searchTerm} />
       </div>
