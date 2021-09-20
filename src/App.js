@@ -7,7 +7,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [players, getPlayers] = useState("");
 
-  const url = "https://api.npoint.io/d6bd0efc05639084eb17/";
+  const url = process.env.URL;
 
   const getAllPlayers = () => {
     axios
